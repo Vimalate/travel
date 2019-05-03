@@ -18,6 +18,4 @@ npm run build
 npm run build --report
 ```
 
-#  .wrapper >>> .swiper-pagination-bullet-active  
-没效果的原因是因为style 设置着scoped，只能作用当前组件
-表示的是在wrapeer下所有出现.swiper-pagination-bullet-active 
+For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
