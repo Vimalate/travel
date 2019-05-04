@@ -24,3 +24,9 @@ npm run build --report
 #   vs code整段右移或者左移
 选中按TAB右移，按SHIFT+TAB左移
 #改动了配置，重启服务器
+
+#如何去除vue项目中的 # --- History模式
+const router = new VueRouter({
+  mode: 'history',
+  routes: [...]
+})
