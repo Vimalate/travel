@@ -5,10 +5,12 @@
          <span class="iconfont city-icon">&#xe632;</span>
          输入城市/景点/游玩主题
      </div>
+     <router-link to="/city" tag="div">
      <div class="header-right">
          {{this.city}}
           <span class="iconfont arrow-icon">&#xe64a;</span>
      </div>
+     </router-link>
  </div>
 </template>
 
