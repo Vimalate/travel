@@ -18,27 +18,11 @@
 export default {
  data() {
   return {
-      recommendList:[
-          {
-              id:'01',
-              imgUrl:'http://img1.qunarzz.com/sight/p0/1904/65/65a949083122447da3.img.jpg_200x200_c4b2f699.jpg',
-              desc:'浪漫的主题公园',
-              title:'华谊兄弟电影世界'
-          },
-           {
-              id:'02',
-              imgUrl:'http://img1.qunarzz.com/sight/p0/1904/65/65a949083122447da3.img.jpg_200x200_c4b2f699.jpg',
-              desc:'浪漫的主题公园',
-              title:'华谊兄弟电影世界'
-          },
-           {
-              id:'03',
-              imgUrl:'http://img1.qunarzz.com/sight/p0/1904/65/65a949083122447da3.img.jpg_200x200_c4b2f699.jpg',
-              desc:'浪漫的主题公园',
-              title:'华谊兄弟电影世界'
-          }
-      ]
+     
   }
+ },
+ props:{
+     recommendList:Array
  },
  components: {
 

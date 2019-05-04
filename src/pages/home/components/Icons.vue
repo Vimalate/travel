@@ -1,6 +1,6 @@
 <template>
   <div class="icons">
-    <swiper>
+    <swiper :options="swiperOption">
       <swiper-slide v-for="(page, index) in pages" :key="index">
         <div class="icon" v-for="item of page" :key="item.id">
           <div class="img" >
@@ -21,74 +21,19 @@
 export default {
   data() {
     return {
-        list:[
-            {
-                id:'01',
-                imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-                desc:'景点门票'
-            },
-            {
-                id:'02',
-                imgUrl:'http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png',
-                desc:'一日游'
-            },
-            {
-                id:'03',
-                imgUrl:'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20194/5ea666792b98f34c86faea912b5fbcf9.png',
-                desc:'玩转五一'
-            },
-            {
-                id:'04',
-                imgUrl:'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20194/5ea666792b98f34c86faea912b5fbcf9.png',
-                desc:'玩转五一'
-            },
-            {
-                id:'05',
-                imgUrl:'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20194/5ea666792b98f34c86faea912b5fbcf9.png',
-                desc:'玩转五一'
-            },
-            {
-                id:'06',
-                imgUrl:'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20194/5ea666792b98f34c86faea912b5fbcf9.png',
-                desc:'玩转五一'
-            },
-            {
-                id:'07',
-                imgUrl:'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20194/5ea666792b98f34c86faea912b5fbcf9.png',
-                desc:'玩转五一'
-            },
-            {
-                id:'08',
-                imgUrl:'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20194/5ea666792b98f34c86faea912b5fbcf9.png',
-                desc:'玩转五一'
-            },
-            {
-                id:'09',
-                imgUrl:'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20194/5ea666792b98f34c86faea912b5fbcf9.png',
-                desc:'玩转五一'
-            },
-            {
-                id:'010',
-                imgUrl:'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20194/5ea666792b98f34c86faea912b5fbcf9.png',
-                desc:'玩转五一'
-            },
-            {
-                id:'011',
-                imgUrl:'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20194/5ea666792b98f34c86faea912b5fbcf9.png',
-                desc:'玩转五一'
-            },
-            {
-                id:'012',
-                imgUrl:'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20194/5ea666792b98f34c86faea912b5fbcf9.png',
-                desc:'玩转五一'
-            },
-        ]
+      swiperOption: {
+        pagination: ".swiper-pagination",
+        autoplay : false, 
+      },
     };
+  },
+  props:{
+    iconList:Array
   },
   computed: {
      pages () {
       const pages = []
-      this.list.forEach((item, index) => {
+      this.iconList.forEach((item, index) => {
         const page = Math.floor(index / 8)
         if (!pages[page]) {
           pages[page] = []

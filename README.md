@@ -23,3 +23,4 @@ npm run build --report
 表示的是在wrapeer下所有出现.swiper-pagination-bullet-active 
 #   vs code整段右移或者左移
 选中按TAB右移，按SHIFT+TAB左移
+#改动了配置，重启服务器
