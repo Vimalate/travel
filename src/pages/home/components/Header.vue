@@ -3,7 +3,7 @@
      <div class="header-left"><div class="iconfont back-icon">&#xe624;</div></div>
      <div class="header-input">
          <span class="iconfont city-icon">&#xe632;</span>
-         输入城市/景点/游玩主题
+         <input class="input" type="text" placeholder="请输入城市名">
      </div>
      <router-link to="/city" tag="div">
      <div class="header-right">
@@ -15,17 +15,18 @@
 </template>
 
 <script>
+import {mapState} from 'vuex'
 export default {
  data() {
   return {
 
   }
  },
- props:{
-     city:String
+ computed:{
+      ...mapState(['city'])
  },
  components: {
-
+    
  }
 }
 </script>
@@ -55,12 +56,16 @@ export default {
             background #ffffff
             color #cccccc
             border-radius .1rem
+            .input
+                
             .city-icon
                 margin-right .1rem
         .header-right
-            width 1.24rem
+            min-width  1.04rem
+            padding 0 .1rem
             float right
             text-align center
+            ellipsis()
             .arrow-icon
                 margin-left: -.04rem
                 font-size: .24rem
