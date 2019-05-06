@@ -30,3 +30,8 @@ const router = new VueRouter({
   mode: 'history',
   routes: [...]
 })
+
+#vuex 组件computed引入mapstate报 was assigned to but it has no setter.错
+## ...mapState(['city']),
+##解决方法 
+...mapState({currentCity:'city'}),
