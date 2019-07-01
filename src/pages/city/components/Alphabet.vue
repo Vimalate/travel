@@ -7,7 +7,7 @@
         :key="items"
         :ref="items"
         @click="lettersClick"
-        @touchstart="touchStart"
+        @touchstart.prevent="touchStart"
         @touchmove="touchMove"
         @touchend="touchEnd"
       >{{items}}</li>

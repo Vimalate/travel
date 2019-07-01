@@ -7,12 +7,15 @@
                 <div><span class="iconfont arrow-icon">&#xe692;</span> {{this.gallaryImgs.length}}</div>
             </div>
         </div>
+        <commonFade>
         <common-gallary :imgs='gallaryImgs' v-show="showGallary" @hide='hide'></common-gallary>
+        </commonFade>
     </div>
 </template>
 
 <script>
 import commonGallary from '../../../common/gellary/Gallary'
+import commonFade from '../../../common/fade/fade'
 export default {
     props:{
         sightName:String,
@@ -30,7 +33,8 @@ export default {
   }
  },
  components: {
-     commonGallary
+     commonGallary,
+     commonFade
  },
  methods:{
      bannerShow (){
