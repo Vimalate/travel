@@ -50,6 +50,7 @@ export default {
      letterChange(letter){
          this.letter=letter 
         //  console.log(letter)
+        
      }
  }
 }
