@@ -55,6 +55,7 @@ export default {
             .banner
                 width 100%
                 height 55vw
+                overflow hidden
                 .img
                     width 100%
             .info
