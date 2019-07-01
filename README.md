@@ -35,3 +35,8 @@ const router = new VueRouter({
 ## ...mapState(['city']),
 ##解决方法 
 ...mapState({currentCity:'city'}),
+
+# 解决详情页 因keep-alive导致点击不加载对应id详情页
+<keep-alive exclude="Detail">
+  <router-view/>
+</keep-alive>
