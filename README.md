@@ -1,7 +1,7 @@
 # travel
 
 > A Vue.js project
-
+>線上預覽 https://vimalate.github.io/travel/dist
 ## Build Setup
 
 ``` bash
