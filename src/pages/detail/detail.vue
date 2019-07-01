@@ -6,7 +6,7 @@
     </detail-banner>
     <detail-list :list='categoryList'></detail-list>
     <div class="content"></div>
- </div>
+ </div> 
 </template>
 
 <script>
