@@ -26,7 +26,7 @@ export default {
  },
 methods:{
     getDetail () {
-        aixos.get('/api/detail.json',
+        aixos.get('../../../static/mock/detail.json',
             {
                 params:{
                     id:this.$route.params.id

@@ -50,7 +50,7 @@ export default {
  },
  methods:{
      getHomeInfo(){
-         axios.get('/api/index.json?city='+this.currentCity)
+         axios.get('../../../static/mock/index.json?city='+this.currentCity)
             .then(this.getSuccess)
      },
      getSuccess(res){
